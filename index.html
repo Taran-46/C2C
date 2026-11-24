@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Code2Chill — Build loud. Ship calm.</title>
+<meta name="description" content="Code2Chill is a build club for engineers, designers and night-owls. Weekly build nights, one deploy, zero status meetings.">
+<meta name="theme-color" content="#05070c">
+<link rel="icon" href="favicon.png">
+<link rel="canonical" href="https://code2chill.club/">
+<meta name="color-scheme" content="dark light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Code2Chill">
+<meta property="og:url" content="https://code2chill.club/">
+<meta property="og:title" content="Code2Chill — Build loud. Ship calm.">
+<meta property="og:description" content="A build club for engineers, designers and night-owls. Weekly build nights, one deploy, zero status meetings.">
+<meta property="og:image" content="assets/img/badge.png">
+<meta property="og:image:alt" content="Code2Chill — a build club for the obsessively curious">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Code2Chill — Build loud. Ship calm.">
+<meta name="twitter:description" content="Weekly build nights, one deploy, zero status meetings.">
+<meta name="twitter:image" content="assets/img/badge.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Code2Chill","alternateName":"CODE2CHILL","url":"https://code2chill.club","logo":"assets/img/logo-512.png","description":"A build club for engineers, designers and night-owls. Weekly build nights, one deploy, zero status meetings.","foundingDate":"2024","email":"hello@code2chill.club","sameAs":["https://github.com","https://instagram.com","https://discord.com","https://lu.ma"]}
+</script>
+<link rel="stylesheet" href="assets/css/fonts-inline.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+<a class="skip" href="#team">Skip to content</a>
+
+<!-- ══ PRELOADER ══ -->
+<div class="pl" id="pl" aria-hidden="true">
+  <div class="pl__grid"></div>
+  <div class="pl__center">
+    <div class="pl__mark"><img src="assets/img/mark.png" alt=""></div>
+    <div class="pl__row">
+      <span class="pl__name">CODE<span>2</span>CHILL</span>
+      <span class="pl__pct" id="plPct">000</span>
+    </div>
+    <div class="pl__bar"><i id="plBar"></i></div>
+  </div>
+  <div class="pl__ticker"><div id="plTicker"></div></div>
+</div>
+
+<!-- ══ OVERLAYS ══ -->
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor__ring"><span></span></div>
+  <div class="cursor__dot"></div>
+</div>
+
+<!-- ══ NAV ══ -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="Code2Chill home">
+    <img class="nav__mark" src="assets/img/mark.png" alt="">
+    <span class="nav__name">CODE<em>2</em>CHILL<span class="nav__slash">/</span></span>
+  </a>
+  <p class="nav__status"><i></i><span>Chitkara University · Student Club</span></p>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#team" data-cursor="link">Team</a>
+    <a href="#events" data-cursor="link">Events</a>
+    <a href="#projects" data-cursor="link">Projects</a>
+    <a href="#gallery" data-cursor="link">Gallery</a>
+  </nav>
+  <div class="nav__tools">
+    <button class="tool tool--room" id="roomBtn" aria-label="Enter the focus room" data-cursor="link">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.6v12.8M1.6 8h12.8"/><circle cx="8" cy="8" r="3.1"/></svg>
+    </button>
+    <button class="tool" id="cmdBtn" aria-label="Open command palette" data-cursor="link">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.4"/><path d="M10.4 10.4 14 14"/></svg>
+      <kbd>K</kbd>
+    </button>
+    <button class="tool tool--mode" id="modeBtn" aria-label="Switch to light mode" aria-pressed="false" data-cursor="link">
+      <span class="tool__day" aria-hidden="true"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3.4"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3.1 3.1l1.1 1.1M11.8 11.8l1.1 1.1M12.9 3.1l-1.1 1.1M4.2 11.8l-1.1 1.1"/></svg></span>
+      <span class="tool__night" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M13 9.6A5.6 5.6 0 0 1 6.4 3a5.8 5.8 0 1 0 6.6 6.6Z"/></svg></span>
+    </button>
+  </div>
+  <a href="#contact" class="btn btn--nav" data-magnetic data-cursor="link">
+    <span>Contact us</span>
+    <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"/></svg>
+  </a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+    <i></i><i></i>
+  </button>
+  <i class="nav__progress" id="navProgress" aria-hidden="true"></i>
+</header>
+
+<div class="mmenu" id="mobileMenu" aria-hidden="true">
+  <nav>
+    <a href="#top"><b>00</b> Home</a>
+    <a href="#team"><b>01</b> Team</a>
+    <a href="#events"><b>02</b> Events</a>
+    <a href="#projects"><b>03</b> Projects</a>
+    <a href="#gallery"><b>04</b> Gallery</a>
+    <a href="#contact"><b>05</b> Contact &amp; Inquiries</a>
+  </nav>
+  <a href="#contact" class="btn btn--wide">Connect With Us <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"/></svg></a>
+  <p class="mmenu__foot">Chitkara University, Punjab · Student Technical Club</p>
+</div>
+
+<main id="main">
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="top">
+  <canvas class="hero__gl" id="gl" aria-hidden="true"></canvas>
+  <canvas class="hero__dust" id="dust" aria-hidden="true"></canvas>
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <div class="hero__watermark" aria-hidden="true" data-drift><img src="assets/img/mark.png" alt=""></div>
+
+  <div class="container hero__inner">
+    <p class="eyebrow hero__eyebrow"><span class="pulse"></span>Chitkara University · Student Technical Club</p>
+
+    <h1 class="hero__title">
+      <span class="line"><span class="line__i">Build loud.</span></span>
+      <span class="line"><span class="line__i">Ship <em>calm.</em></span></span>
+    </h1>
+
+    <div class="hero__foot">
+      <p class="hero__lede">An active student-led technical community at Chitkara University. We bring curious minds together to explore modern engineering, develop practical software, and collaborate across technical disciplines. Two hours of focus, one deploy, zero status meetings.</p>
+      <dl class="hero__stats">
+        <div><dt>Members</dt><dd><span class="num" data-count="240">240</span><sup>+</sup></dd></div>
+        <div><dt>Nights</dt><dd><span class="num" data-count="32">32</span></dd></div>
+        <div><dt>Cities</dt><dd><span class="num" data-count="1">1</span></dd></div>
+        <div><dt>Since</dt><dd>2024</dd></div>
+      </dl>
+      <a class="hero__scroll" href="#team" data-cursor="link">
+        <span>Scroll to enter</span>
+        <i><svg viewBox="0 0 10 26" aria-hidden="true"><path d="M5 0v24M1 20l4 4 4-4"/></svg></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero__next">
+    <span class="eyebrow">Next night</span>
+    <p><span id="nextDate">Fri 28 Nov</span> · 19:00<br><span>Chitkara Campus <em>+</em> Remote</span></p>
+    <div class="cd" id="cd" aria-live="off">
+      <span class="cd__cell"><b id="cdD">--</b><i>days</i></span>
+      <span class="cd__cell"><b id="cdH">--</b><i>hrs</i></span>
+      <span class="cd__cell"><b id="cdM">--</b><i>min</i></span>
+      <span class="cd__cell"><b id="cdS">--</b><i>sec</i></span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__row">
+    <span>Learn <i>✳</i> Build <i>✳</i> Connect <i>✳</i> Ship <i>✳</i> Repeat <i>✳</i></span>
+    <span>Learn <i>✳</i> Build <i>✳</i> Connect <i>✳</i> Ship <i>✳</i> Repeat <i>✳</i></span>
+  </div>
+</div>
+
+<!-- ══ 01. TEAM ══ -->
+<section class="sec-pad" id="team">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="pulse"></span><b>01</b> — Student Leadership &amp; Team</p>
+      <h2 class="sec-title" data-lines>Student Leadership<br><em>&amp; Core Leads.</em></h2>
+      <p class="sec-lede">Code2Chill is entirely student-founded and student-led at Chitkara University. Our coordinators volunteer their time to mentor peers, run technical workshops, and organize hackathon sprints.</p>
+    </div>
+
+    <!-- Toolbar: Filters & Search -->
+    <div class="filter-toolbar">
+      <div class="filter-pills" role="tablist" aria-label="Filter team by group">
+        <span class="pill-label">Group:</span>
+        <button class="pill-btn team-filter-pill active" data-group="all">All Coordinators (07)</button>
+        <button class="pill-btn team-filter-pill" data-group="leadership">Leadership (02)</button>
+        <button class="pill-btn team-filter-pill" data-group="core leads">Core Leads (05)</button>
+      </div>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="teamSearch" placeholder="Search by name, role, or skill..." aria-label="Search coordinators">
+      </div>
+    </div>
+
+    <!-- Coordinators Grid -->
+    <div class="card-grid-3" id="teamGrid">
+
+      <!-- 1. Lakshay Kalra -->
+      <article class="c2c-card team-card" 
+        data-name="Lakshay Kalra" 
+        data-role="President" 
+        data-group="Leadership" 
+        data-initials="LK"
+        data-bio="The backbone and mastermind of Code2Chill. A leader and visionary who strives to take student technical innovation to new heights."
+        data-linkedin="https://www.linkedin.com/in/lakshay-kalra-5667ba387/">
+        <div>
+          <div class="team-card__head">
+            <div class="monogram-badge">
+              <span class="monogram-text">LK</span>
+              <span class="monogram-corner" title="Verified Coordinator">
+                <svg viewBox="0 0 16 16"><path d="M13.5 4.5 6.5 11.5 3 8"/></svg>
+              </span>
+            </div>
+            <div class="team-card__meta">
+              <h3 class="team-card__name">Lakshay Kalra</h3>
+              <span class="team-card__role">President</span>
+              <span class="team-card__group">Leadership</span>
+            </div>
+          </div>
+          <p class="team-card__bio">The backbone and mastermind of Code2Chill. A leader and visionary who strives to take student technical innovation to new heights.</p>
+        </div>
+        <div class="team-card__foot">
+          <span class="coord-tag"><i></i> Chitkara University</span>
+          <div style="display:flex;gap:8px;">
+            <button class="pill-btn" data-coord-id="1" style="font-size:10.5px;padding:4px 10px;">View Profile</button>
+            <a href="https://www.linkedin.com/in/lakshay-kalra-5667ba387/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Lakshay on LinkedIn" title="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Jiya Arora -->
+      <article class="c2c-card team-card" 
+        data-name="Jiya Arora" 
+        data-role="Vice President" 
+        data-group="Leadership" 
+        data-initials="JA"
+        data-bio="The universal support pillar who ensures Code2Chill runs smoothly with zero bugs in the system."
+        data-linkedin="https://www.linkedin.com/in/jiya-arora-13b214377/">
+        <div>
+          <div class="team-card__head">
+            <div class="monogram-badge">
+              <span class="monogram-text">JA</span>
+              <span class="monogram-corner" title="Verified Coordinator">
+                <svg viewBox="0 0 16 16"><path d="M13.5 4.5 6.5 11.5 3 8"/></svg>
+              </span>
+            </div>
+            <div class="team-card__meta">
+              <h3 class="team-card__name">Jiya Arora</h3>
+              <span class="team-card__role">Vice President</span>
+              <span class="team-card__group">Leadership</span>
+            </div>
+          </div>
+          <p class="team-card__bio">The universal support pillar who ensures Code2Chill runs smoothly with zero bugs in the system.</p>
+        </div>
+        <div class="team-card__foot">
+          <span class="coord-tag"><i></i> Chitkara University</span>
+          <div style="display:flex;gap:8px;">
+            <button class="pill-btn" data-coord-id="2" style="font-size:10.5px;padding:4px 10px;">View Profile</button>
+            <a href="https://www.linkedin.com/in/jiya-arora-13b214377/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Jiya on LinkedIn" title="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Samanyu Thakur -->
+      <article class="c2c-card team-card" 
+        data-name="Samanyu Thakur" 
+        data-role="Technical Head" 
+        data-group="Core Leads" 
+        data-initials="ST"
+        data-bio="A powerhouse in the technical domain with vast expertise across software engineering stacks and a mentor who makes complex learning feel effortless."
+        data-linkedin="https://www.linkedin.com/in/samanyu-thakur-76622b386/">
+        <div>
+          <div class="team-card__head">
+            <div class="monogram-badge">
+              <span class="monogram-text">ST</span>
+              <span class="monogram-corner" title="Verified Coordinator">
+                <svg viewBox="0 0 16 16"><path d="M13.5 4.5 6.5 11.5 3 8"/></svg>
+              </span>
+            </div>
+            <div class="team-card__meta">
+              <h3 class="team-card__name">Samanyu Thakur</h3>
+              <span class="team-card__role">Technical Head</span>
+              <span class="team-card__group">Core Leads</span>
+            </div>
+          </div>
+          <p class="team-card__bio">A powerhouse in the technical domain with vast expertise across software engineering stacks and a mentor who makes complex learning feel effortless.</p>
+        </div>
+        <div class="team-card__foot">
+          <span class="coord-tag"><i></i> Chitkara University</span>
+          <div style="display:flex;gap:8px;">
+            <button class="pill-btn" data-coord-id="3" style="font-size:10.5px;padding:4px 10px;">View Profile</button>
+            <a href="https://www.linkedin.com/in/samanyu-thakur-76622b386/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Samanyu on LinkedIn" title="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Bhupinder Singh -->
+      <article class="c2c-card team-card" 
+        data-name="Bhupinder Singh" 
+        data-role="Technical Head" 
+        data-group="Core Leads" 
+        data-initials="BS"
+        data-bio="The epitome of engineering discipline with technical curiosity spanning deep systems — living proof that focus and consistency always ship."
+        data-linkedin="https://www.linkedin.com/in/bhupindersinghmann/">
+        <div>
+          <div class="team-card__head">
+            <div class="monogram-badge">
+              <span class="monogram-text">BS</span>
+              <span class="monogram-corner" title="Verified Coordinator">
+                <svg viewBox="0 0 16 16"><path d="M13.5 4.5 6.5 11.5 3 8"/></svg>
+              </span>
+            </div>
+            <div class="team-card__meta">
+              <h3 class="team-card__name">Bhupinder Singh</h3>
+              <span class="team-card__role">Technical Head</span>
+              <span class="team-card__group">Core Leads</span>
+            </div>
+          </div>
+          <p class="team-card__bio">The epitome of engineering discipline with technical curiosity spanning deep systems — living proof that focus and consistency always ship.</p>
+        </div>
+        <div class="team-card__foot">
+          <span class="coord-tag"><i></i> Chitkara University</span>
+          <div style="display:flex;gap:8px;">
+            <button class="pill-btn" data-coord-id="4" style="font-size:10.5px;padding:4px 10px;">View Profile</button>
+            <a href="https://www.linkedin.com/in/bhupindersinghmann/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Bhupinder on LinkedIn" title="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. Jashan Bhalla -->
+      <article class="c2c-card team-card" 
+        data-name="Jashan Bhalla" 
+        data-role="Social Media Head" 
+        data-group="Core Leads" 
+        data-initials="JB"
+        data-bio="The creative energy behind Code2Chill, ensuring club achievements, sprint demos, and technical milestones shine bright across our community channels."
+        data-linkedin="https://www.linkedin.com/in/jashan-bhalla-7b6539213/">
+        <div>
+          <div class="team-card__head">
+            <div class="monogram-badge">
+              <span class="monogram-text">JB</span>
+              <span class="monogram-corner" title="Verified Coordinator">
+                <svg viewBox="0 0 16 16"><path d="M13.5 4.5 6.5 11.5 3 8"/></svg>
+              </span>
+            </div>
+            <div class="team-card__meta">
+              <h3 class="team-card__name">Jashan Bhalla</h3>
+              <span class="team-card__role">Social Media Head</span>
+              <span class="team-card__group">Core Leads</span>
+            </div>
+          </div>
+          <p class="team-card__bio">The creative energy behind Code2Chill, ensuring club achievements, sprint demos, and technical milestones shine bright across our community channels.</p>
+        </div>
+        <div class="team-card__foot">
+          <span class="coord-tag"><i></i> Chitkara University</span>
+          <div style="display:flex;gap:8px;">
+            <button class="pill-btn" data-coord-id="5" style="font-size:10.5px;padding:4px 10px;">View Profile</button>
+            <a href="https://www.linkedin.com/in/jashan-bhalla-7b6539213/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Jashan on LinkedIn" title="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6. Ayush Sharma -->
+      <article class="c2c-card team-card" 
+        data-name="Ayush Sharma" 
+        data-role="Content Head" 
+        data-group="Core Leads" 
+        data-initials="AS"
+        data-bio="Combines creative narrative with extensive engineering knowledge to ensure our workshops, briefs, and code teardowns resonate with clarity."
+        data-linkedin="https://www.linkedin.com/in/ayushthisside/">
+        <div>
+          <div class="team-card__head">
+            <div class="monogram-badge">
+              <span class="monogram-text">AS</span>
+              <span class="monogram-corner" title="Verified Coordinator">
+                <svg viewBox="0 0 16 16"><path d="M13.5 4.5 6.5 11.5 3 8"/></svg>
+              </span>
+            </div>
+            <div class="team-card__meta">
+              <h3 class="team-card__name">Ayush Sharma</h3>
+              <span class="team-card__role">Content Head</span>
+              <span class="team-card__group">Core Leads</span>
+            </div>
+          </div>
+          <p class="team-card__bio">Combines creative narrative with extensive engineering knowledge to ensure our workshops, briefs, and code teardowns resonate with clarity.</p>
+        </div>
+        <div class="team-card__foot">
+          <span class="coord-tag"><i></i> Chitkara University</span>
+          <div style="display:flex;gap:8px;">
+            <button class="pill-btn" data-coord-id="6" style="font-size:10.5px;padding:4px 10px;">View Profile</button>
+            <a href="https://www.linkedin.com/in/ayushthisside/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Ayush on LinkedIn" title="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7. Tamanna Kakkar -->
+      <article class="c2c-card team-card" 
+        data-name="Tamanna Kakkar" 
+        data-role="Content Head" 
+        data-group="Core Leads" 
+        data-initials="TK"
+        data-bio="A sharp combination of wit, technical curiosity, and design thinking that ensures every club initiative and event brief is thoroughly articulated."
+        data-linkedin="https://www.linkedin.com/in/tamanna-kakkar-995b73385/">
+        <div>
+          <div class="team-card__head">
+            <div class="monogram-badge">
+              <span class="monogram-text">TK</span>
+              <span class="monogram-corner" title="Verified Coordinator">
+                <svg viewBox="0 0 16 16"><path d="M13.5 4.5 6.5 11.5 3 8"/></svg>
+              </span>
+            </div>
+            <div class="team-card__meta">
+              <h3 class="team-card__name">Tamanna Kakkar</h3>
+              <span class="team-card__role">Content Head</span>
+              <span class="team-card__group">Core Leads</span>
+            </div>
+          </div>
+          <p class="team-card__bio">A sharp combination of wit, technical curiosity, and design thinking that ensures every club initiative and event brief is thoroughly articulated.</p>
+        </div>
+        <div class="team-card__foot">
+          <span class="coord-tag"><i></i> Chitkara University</span>
+          <div style="display:flex;gap:8px;">
+            <button class="pill-btn" data-coord-id="7" style="font-size:10.5px;padding:4px 10px;">View Profile</button>
+            <a href="https://www.linkedin.com/in/tamanna-kakkar-995b73385/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Tamanna on LinkedIn" title="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__row">
+    <span>Workshops <i>✳</i> Hackathons <i>✳</i> Tech Talks <i>✳</i> Zero Status Meetings <i>✳</i></span>
+    <span>Workshops <i>✳</i> Hackathons <i>✳</i> Tech Talks <i>✳</i> Zero Status Meetings <i>✳</i></span>
+  </div>
+</div>
+
+<!-- ══ 02. EVENTS ══ -->
+<section class="sec-pad" id="events">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="pulse"></span><b>02</b> — Club Schedule &amp; Archive</p>
+      <h2 class="sec-title" data-lines>Workshops, talks &amp;<br><em>build sprints.</em></h2>
+      <p class="sec-lede">Explore upcoming coding sessions, hackathons, and technical talks. All event dates and deadlines are rendered in Indian Standard Time (Asia/Kolkata).</p>
+    </div>
+
+    <!-- Live Countdown Banner -->
+    <div class="countdown-banner">
+      <div class="countdown-banner__info">
+        <h3>Next Technical Session — Live Countdown</h3>
+        <p>Friday at 19:00 IST · Chitkara University, Turing Hall + Remote</p>
+      </div>
+      <div class="countdown-clock" aria-label="Countdown to next session">
+        <div class="clock-cell"><b id="pageCdD">--</b><i>Days</i></div>
+        <div class="clock-cell"><b id="pageCdH">--</b><i>Hours</i></div>
+        <div class="clock-cell"><b id="pageCdM">--</b><i>Minutes</i></div>
+        <div class="clock-cell"><b id="pageCdS">--</b><i>Seconds</i></div>
+      </div>
+    </div>
+
+    <!-- Toolbar: Tabs & Category Filter Pills -->
+    <div class="filter-toolbar">
+      <div class="tab-group" role="tablist" aria-label="Event temporal tabs">
+        <button class="tab-btn event-tab-btn active" data-tab="upcoming">Upcoming Events (02)</button>
+        <button class="tab-btn event-tab-btn" data-tab="past">Past Archive (02)</button>
+      </div>
+
+      <div class="filter-pills" role="tablist" aria-label="Filter events by category">
+        <span class="pill-label">Category:</span>
+        <button class="pill-btn event-cat-pill active" data-category="all">All</button>
+        <button class="pill-btn event-cat-pill" data-category="workshop">Workshop</button>
+        <button class="pill-btn event-cat-pill" data-category="hackathon">Hackathon</button>
+        <button class="pill-btn event-cat-pill" data-category="tech talk">Tech Talk</button>
+        <button class="pill-btn event-cat-pill" data-category="peer session">Peer Session</button>
+      </div>
+    </div>
+
+    <!-- Events Grid -->
+    <div class="card-grid-2" id="eventsGrid">
+
+      <!-- 1. Next.js 14 Workshop (Upcoming) -->
+      <article class="c2c-card event-card"
+        data-id="evt-1"
+        data-title="Next.js 14 Full-Stack Architecture Workshop"
+        data-category="Workshop"
+        data-temporal="upcoming"
+        data-status="open"
+        data-date="Fri 28 Nov 2026 · 19:00 - 21:00 IST"
+        data-venue="Chitkara University, Turing Hall"
+        data-summary="A deep architectural walkthrough of React Server Components, Server Actions, streaming SSR, and secure database querying with PostgreSQL. Build and deploy a real application before laptops close.">
+        <div>
+          <div class="procedural-banner" aria-hidden="true">
+            <svg class="banner-svg" viewBox="0 0 400 160">
+              <defs>
+                <linearGradient id="bgEv1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d6bff" stop-opacity=".4"/><stop offset="1" stop-color="#10b981" stop-opacity=".1"/></linearGradient>
+              </defs>
+              <rect width="400" height="160" fill="url(#bgEv1)"/>
+              <circle cx="200" cy="80" r="48" stroke="#3d6bff" stroke-width="1.5" fill="none" stroke-dasharray="3 6"/>
+              <circle cx="200" cy="80" r="28" stroke="#7d9dff" stroke-width="1.5" fill="none"/>
+              <path d="M60 80h90M250 80h90M200 20v30M200 110v30" stroke="rgba(125,157,255,.4)" stroke-width="1.5"/>
+              <circle cx="60" cy="80" r="4" fill="#3d6bff"/>
+              <circle cx="340" cy="80" r="4" fill="#10b981"/>
+              <text x="200" y="84" fill="#c3d6ff" font-family="monospace" font-size="11" text-anchor="middle" font-weight="600">NEXT.JS 14</text>
+            </svg>
+            <span class="banner-badge">Workshop</span>
+            <span class="banner-stat">Limited Seats</span>
+          </div>
+
+          <div class="event-card__top">
+            <span class="badge-status badge-status--open">Registrations Open</span>
+            <span style="font-family:var(--ff-mono);font-size:11px;color:var(--ink-3);">Turing Hall</span>
+          </div>
+
+          <h3 class="event-card__title">Next.js 14 Full-Stack Architecture Workshop</h3>
+          <p class="event-card__summary">A deep architectural walkthrough of React Server Components, Server Actions, streaming SSR, and secure database querying with PostgreSQL. Build and deploy a real application before laptops close.</p>
+
+          <div class="event-meta-grid">
+            <div class="event-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Fri 28 Nov · 19:00 IST</span>
+            </div>
+            <div class="event-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Turing Hall, Campus</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card__action">
+          <span style="font-family:var(--ff-mono);font-size:11px;color:var(--ink-3);">Chitkara University</span>
+          <button class="pill-btn active" data-event-id="evt-1">View Details &amp; RSVP →</button>
+        </div>
+      </article>
+
+      <!-- 2. ChillHack 2026 (Upcoming) -->
+      <article class="c2c-card event-card"
+        data-id="evt-2"
+        data-title="ChillHack 2026: 24-Hour Campus Hackathon"
+        data-category="Hackathon"
+        data-temporal="upcoming"
+        data-status="open"
+        data-date="Sat 05 Dec 2026 · 12:00 IST Kickoff"
+        data-venue="Chitkara Innovation Lab"
+        data-summary="Collaborative 24-hour sprint where students prototype practical software solutions. Midnight debugging circles, mentor reviews, pizza, and live production deployments.">
+        <div>
+          <div class="procedural-banner" aria-hidden="true">
+            <svg class="banner-svg" viewBox="0 0 400 160">
+              <defs>
+                <linearGradient id="bgEv2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb878" stop-opacity=".35"/><stop offset="1" stop-color="#3d6bff" stop-opacity=".15"/></linearGradient>
+              </defs>
+              <rect width="400" height="160" fill="url(#bgEv2)"/>
+              <polygon points="200,30 260,130 140,130" stroke="#ffb878" stroke-width="1.5" fill="none"/>
+              <circle cx="200" cy="85" r="16" fill="rgba(255,184,120,.2)" stroke="#ffb878"/>
+              <line x1="50" y1="130" x2="350" y2="130" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+              <text x="200" y="90" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle" font-weight="700">24H</text>
+            </svg>
+            <span class="banner-badge">Hackathon</span>
+            <span class="banner-stat">Team Sprints</span>
+          </div>
+
+          <div class="event-card__top">
+            <span class="badge-status badge-status--open">Registrations Open</span>
+            <span style="font-family:var(--ff-mono);font-size:11px;color:var(--ink-3);">Innovation Lab</span>
+          </div>
+
+          <h3 class="event-card__title">ChillHack 2026: 24-Hour Campus Hackathon</h3>
+          <p class="event-card__summary">Collaborative 24-hour sprint where students prototype practical software solutions. Midnight debugging circles, mentor reviews, pizza, and live production deployments.</p>
+
+          <div class="event-meta-grid">
+            <div class="event-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Sat 05 Dec · 12:00 IST</span>
+            </div>
+            <div class="event-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Innovation Lab, Campus</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card__action">
+          <span style="font-family:var(--ff-mono);font-size:11px;color:var(--ink-3);">Chitkara University</span>
+          <button class="pill-btn active" data-event-id="evt-2">View Details &amp; RSVP →</button>
+        </div>
+      </article>
+
+      <!-- 3. Scaling Systems (Past) -->
+      <article class="c2c-card event-card"
+        style="display:none;"
+        data-id="evt-3"
+        data-title="Scaling Systems: From Monolith to Distributed Services"
+        data-category="Tech Talk"
+        data-temporal="past"
+        data-status="closed"
+        data-date="Fri 12 Dec 2025 · 19:00 IST"
+        data-venue="Newton Hall + Remote Stream"
+        data-summary="Senior student engineers shared teardowns on database indexing strategies, query profiling, caching layers, and handling 1M+ row datasets without performance bottlenecks.">
+        <div>
+          <div class="procedural-banner" aria-hidden="true">
+            <svg class="banner-svg" viewBox="0 0 400 160">
+              <rect width="400" height="160" fill="#080c16"/>
+              <path d="M50 120 C 120 120, 150 40, 220 40 C 290 40, 310 100, 370 70" stroke="#7d9dff" stroke-width="2" fill="none"/>
+              <circle cx="220" cy="40" r="4" fill="#3d6bff"/>
+              <circle cx="370" cy="70" r="4" fill="#10b981"/>
+              <text x="220" y="28" fill="#c3d6ff" font-family="monospace" font-size="10" text-anchor="middle">1M ROWS</text>
+            </svg>
+            <span class="banner-badge">Tech Talk</span>
+            <span class="banner-stat">Archived</span>
+          </div>
+
+          <div class="event-card__top">
+            <span class="badge-status badge-status--past">Completed Session</span>
+            <span style="font-family:var(--ff-mono);font-size:11px;color:var(--ink-3);">Newton Hall</span>
+          </div>
+
+          <h3 class="event-card__title">Scaling Systems: From Monolith to Distributed Services</h3>
+          <p class="event-card__summary">Senior student engineers shared teardowns on database indexing strategies, query profiling, caching layers, and handling 1M+ row datasets without performance bottlenecks.</p>
+
+          <div class="event-meta-grid">
+            <div class="event-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Fri 12 Dec · 19:00 IST</span>
+            </div>
+            <div class="event-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Newton Hall, Campus</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card__action">
+          <span style="font-family:var(--ff-mono);font-size:11px;color:var(--ink-3);">Chitkara University</span>
+          <button class="pill-btn" data-event-id="evt-3">View Archive Notes →</button>
+        </div>
+      </article>
+
+      <!-- 4. Git & Terminal Jumpstart (Past) -->
+      <article class="c2c-card event-card"
+        style="display:none;"
+        data-id="evt-4"
+        data-title="Git, Terminal &amp; Open Source Jumpstart"
+        data-category="Peer Session"
+        data-temporal="past"
+        data-status="closed"
+        data-date="Wed 25 Aug 2025 · 18:30 IST"
+        data-venue="Computing Block Labs"
+        data-summary="First-year engineering students paired with mentors to master terminal commands, branch management, merge conflict resolution, and creating their first open-source pull requests.">
+        <div>
+          <div class="procedural-banner" aria-hidden="true">
+            <svg class="banner-svg" viewBox="0 0 400 160">
+              <rect width="400" height="160" fill="#080c16"/>
+              <line x1="80" y1="80" x2="320" y2="80" stroke="#6a7488" stroke-width="2"/>
+              <path d="M140 80 C 180 80, 180 40, 220 40 L 280 40" stroke="#3d6bff" stroke-width="2" fill="none"/>
+              <circle cx="140" cy="80" r="5" fill="#3d6bff"/>
+              <circle cx="220" cy="40" r="5" fill="#10b981"/>
+              <circle cx="280" cy="40" r="5" fill="#ffb878"/>
+              <circle cx="320" cy="80" r="5" fill="#c3d6ff"/>
+              <text x="240" y="30" fill="#34d399" font-family="monospace" font-size="10" text-anchor="middle">git checkout -b feature</text>
+            </svg>
+            <span class="banner-badge">Peer Session</span>
+            <span class="banner-stat">Archived</span>
+          </div>
+
+          <div class="event-card__top">
+            <span class="badge-status badge-status--past">Completed Session</span>
+            <span style="font-family:var(--ff-mono);font-size:11px;color:var(--ink-3);">Computing Block</span>
+          </div>
+
+          <h3 class="event-card__title">Git, Terminal &amp; Open Source Jumpstart</h3>
+          <p class="event-card__summary">First-year engineering students paired with mentors to master terminal commands, branch management, merge conflict resolution, and creating their first open-source pull requests.</p>
+
+          <div class="event-meta-grid">
+            <div class="event-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Wed 25 Aug · 18:30 IST</span>
+            </div>
+            <div class="event-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Computing Block, Campus</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card__action">
+          <span style="font-family:var(--ff-mono);font-size:11px;color:var(--ink-3);">Chitkara University</span>
+          <button class="pill-btn" data-event-id="evt-4">View Archive Notes →</button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__row">
+    <span>Code <i>✳</i> Commit <i>✳</i> Build <i>✳</i> Deploy <i>✳</i></span>
+    <span>Code <i>✳</i> Commit <i>✳</i> Build <i>✳</i> Deploy <i>✳</i></span>
+  </div>
+</div>
+
+<!-- ══ 03. PROJECTS ══ -->
+<section class="sec-pad" id="projects">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="pulse"></span><b>03</b> — Student Showcase</p>
+      <h2 class="sec-title" data-lines>Software built during<br><em>night sprints.</em></h2>
+      <p class="sec-lede">Explore practical utilities, developer tools, and campus applications built by Code2Chill student engineers. Engineered with modern stacks and student privacy at the core.</p>
+    </div>
+
+    <!-- Toolbar: Categories & Search -->
+    <div class="filter-toolbar">
+      <div class="filter-pills" role="tablist" aria-label="Filter projects by category">
+        <span class="pill-label">Category:</span>
+        <button class="pill-btn proj-cat-pill active" data-category="all">All Projects (03)</button>
+        <button class="pill-btn proj-cat-pill" data-category="web application">Web Application (01)</button>
+        <button class="pill-btn proj-cat-pill" data-category="productivity">Productivity (01)</button>
+        <button class="pill-btn proj-cat-pill" data-category="utility">Utility (01)</button>
+      </div>
+
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="projSearch" placeholder="Search projects or stacks (e.g. Next.js, React)..." aria-label="Search projects">
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="card-grid-3" id="projectsGrid">
+
+      <!-- 1. DevPulse -->
+      <article class="c2c-card project-card"
+        data-title="DevPulse: Campus Activity Aggregator"
+        data-category="Web Application"
+        data-tech="Next.js, TypeScript, Tailwind CSS, PostgreSQL"
+        data-contrib="Aarav Patel (Lead), Rohan Mehta (UI)"
+        data-demo="https://devpulse.sample.code2chill.org"
+        data-problem="Student developers across different engineering streams often build great software in isolation. DevPulse solves cross-department discoverability by providing a centralized campus showcase where students can present their practical projects, discuss architecture, and find project collaborators."
+        data-summary="A platform showcasing student engineering milestones, active learning sprints, and technical contributions across campus. Built during a Code2Chill peer learning circle to encourage cross-discipline collaboration.">
+        <div>
+          <div class="procedural-banner" aria-hidden="true">
+            <svg class="banner-svg" viewBox="0 0 400 160">
+              <defs>
+                <linearGradient id="bgP1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d6bff" stop-opacity=".35"/><stop offset="1" stop-color="#10b981" stop-opacity=".15"/></linearGradient>
+              </defs>
+              <rect width="400" height="160" fill="url(#bgP1)"/>
+              <rect x="40" y="100" width="16" height="40" rx="3" fill="#3d6bff"/>
+              <rect x="64" y="80" width="16" height="60" rx="3" fill="#7d9dff"/>
+              <rect x="88" y="55" width="16" height="85" rx="3" fill="#34d399"/>
+              <rect x="112" y="70" width="16" height="70" rx="3" fill="#3d6bff"/>
+              <rect x="136" y="45" width="16" height="95" rx="3" fill="#7d9dff"/>
+              <circle cx="280" cy="80" r="40" stroke="rgba(125,157,255,.3)" stroke-width="1.5" fill="none"/>
+              <circle cx="280" cy="80" r="22" stroke="rgba(125,157,255,.5)" stroke-width="1.5" fill="none" stroke-dasharray="2 4"/>
+              <line x1="280" y1="40" x2="280" y2="120" stroke="rgba(125,157,255,.3)"/>
+              <line x1="240" y1="80" x2="320" y2="80" stroke="rgba(125,157,255,.3)"/>
+              <text x="280" y="84" fill="#fff" font-family="monospace" font-size="9" text-anchor="middle">METRICS</text>
+            </svg>
+            <span class="banner-badge">Web Application</span>
+            <span class="banner-stat">Featured</span>
+          </div>
+
+          <h3 class="event-card__title" style="font-size:20px;">DevPulse: Campus Activity Aggregator</h3>
+          
+          <div class="project-card__tags">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Tailwind</span>
+            <span class="tech-tag">PostgreSQL</span>
+          </div>
+
+          <div class="project-card__problem">
+            <strong>Problem Solved</strong>
+            Eliminates engineering isolation by providing cross-department project discoverability.
+          </div>
+
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.55;margin-bottom:16px;">
+            Aggregates student engineering milestones, sprint contributions, and architecture writeups in one unified directory.
+          </p>
+        </div>
+
+        <div>
+          <div class="project-card__contribs" style="margin-bottom:16px;">
+            <span>By: Aarav Patel &amp; Rohan Mehta</span>
+          </div>
+          <div class="event-card__action">
+            <span style="font-family:var(--ff-mono);font-size:10.5px;color:var(--ink-3);">Chitkara University</span>
+            <button class="pill-btn active" data-project-id="p-1">View Architecture →</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. PeerNotes -->
+      <article class="c2c-card project-card"
+        data-title="PeerNotes: Collaborative Markdown Knowledge Base"
+        data-category="Productivity"
+        data-tech="React, TypeScript, Tailwind CSS, IndexedDB"
+        data-contrib="Priya Sen (Full-Stack)"
+        data-demo="https://peernotes.sample.code2chill.org"
+        data-problem="Engineering coursework involves complex technical formulas, code snippets, and diagrams that standard note applications render poorly. PeerNotes gives students a clean markdown editor with KaTeX math rendering, searchable tags, and offline caching for exam study."
+        data-summary="A fast, distraction-free markdown note-sharing platform with instant math formula rendering and offline revision support. Designed to make lecture summaries searchable even without reliable campus connectivity.">
+        <div>
+          <div class="procedural-banner" aria-hidden="true">
+            <svg class="banner-svg" viewBox="0 0 400 160">
+              <defs>
+                <linearGradient id="bgP2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7d9dff" stop-opacity=".3"/><stop offset="1" stop-color="#3d6bff" stop-opacity=".1"/></linearGradient>
+              </defs>
+              <rect width="400" height="160" fill="url(#bgP2)"/>
+              <rect x="40" y="30" width="120" height="8" rx="2" fill="#7d9dff"/>
+              <rect x="40" y="46" width="180" height="6" rx="2" fill="rgba(255,255,255,.3)"/>
+              <rect x="40" y="58" width="160" height="6" rx="2" fill="rgba(255,255,255,.2)"/>
+              <rect x="40" y="74" width="80" height="6" rx="2" fill="#34d399"/>
+              <rect x="40" y="86" width="200" height="6" rx="2" fill="rgba(255,255,255,.3)"/>
+              <text x="310" y="75" fill="#ffb878" font-family="serif" font-size="20" font-style="italic" text-anchor="middle">∫ f(x) dx</text>
+              <text x="310" y="105" fill="#c3d6ff" font-family="monospace" font-size="10" text-anchor="middle">KATEX RENDER</text>
+            </svg>
+            <span class="banner-badge">Productivity</span>
+            <span class="banner-stat">Local-First</span>
+          </div>
+
+          <h3 class="event-card__title" style="font-size:20px;">PeerNotes: Markdown Knowledge Base</h3>
+          
+          <div class="project-card__tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">IndexedDB</span>
+            <span class="tech-tag">KaTeX Math</span>
+          </div>
+
+          <div class="project-card__problem">
+            <strong>Problem Solved</strong>
+            Instant LaTeX formula and syntax rendering for engineering course revisions.
+          </div>
+
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.55;margin-bottom:16px;">
+            Distraction-free markdown study platform with local-first offline storage and clean PDF export.
+          </p>
+        </div>
+
+        <div>
+          <div class="project-card__contribs" style="margin-bottom:16px;">
+            <span>By: Priya Sen</span>
+          </div>
+          <div class="event-card__action">
+            <span style="font-family:var(--ff-mono);font-size:10.5px;color:var(--ink-3);">Chitkara University</span>
+            <button class="pill-btn active" data-project-id="p-2">View Architecture →</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. CampusNav -->
+      <article class="c2c-card project-card"
+        data-title="CampusNav: Interactive Indoor Venue Guide"
+        data-category="Utility"
+        data-tech="TypeScript, SVG Mapping, PWA"
+        data-contrib="Kabir Nair (Core Dev)"
+        data-demo="https://campusnav.sample.code2chill.org"
+        data-problem="New university students often struggle to locate specific seminar halls, labs, and lecture theatres during busy event days. CampusNav provides responsive indoor floor plans and accessible route directions directly in any mobile browser without requiring app installation."
+        data-summary="Lightweight progressive web app helping incoming students find seminar halls, computer labs, and workshop rooms with ease. Designed during a club hackathon sprint.">
+        <div>
+          <div class="procedural-banner" aria-hidden="true">
+            <svg class="banner-svg" viewBox="0 0 400 160">
+              <defs>
+                <linearGradient id="bgP3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10b981" stop-opacity=".3"/><stop offset="1" stop-color="#3d6bff" stop-opacity=".15"/></linearGradient>
+              </defs>
+              <rect width="400" height="160" fill="url(#bgP3)"/>
+              <path d="M50 40 L160 40 L160 120 L280 120 L280 60 L360 60" stroke="#34d399" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+              <circle cx="50" cy="40" r="6" fill="#3d6bff"/>
+              <circle cx="160" cy="80" r="4" fill="#ffb878"/>
+              <circle cx="280" cy="120" r="4" fill="#7d9dff"/>
+              <circle cx="360" cy="60" r="7" fill="#10b981"/>
+              <text x="360" y="90" fill="#c3d6ff" font-family="monospace" font-size="9" text-anchor="middle">HALL 4B</text>
+            </svg>
+            <span class="banner-badge">Utility</span>
+            <span class="banner-stat">PWA</span>
+          </div>
+
+          <h3 class="event-card__title" style="font-size:20px;">CampusNav: Indoor Venue Guide</h3>
+          
+          <div class="project-card__tags">
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">SVG Mapping</span>
+            <span class="tech-tag">PWA</span>
+          </div>
+
+          <div class="project-card__problem">
+            <strong>Problem Solved</strong>
+            Quick floor-plan navigation for seminar halls, conference suites, and labs.
+          </div>
+
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.55;margin-bottom:16px;">
+            Lightweight progressive web app providing responsive indoor paths without requiring native downloads.
+          </p>
+        </div>
+
+        <div>
+          <div class="project-card__contribs" style="margin-bottom:16px;">
+            <span>By: Kabir Nair</span>
+          </div>
+          <div class="event-card__action">
+            <span style="font-family:var(--ff-mono);font-size:10.5px;color:var(--ink-3);">Chitkara University</span>
+            <button class="pill-btn active" data-project-id="p-3">View Architecture →</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__row">
+    <span>Chitkara University <i>✳</i> Punjab, India <i>✳</i> Student Technical Community <i>✳</i></span>
+    <span>Chitkara University <i>✳</i> Punjab, India <i>✳</i> Student Technical Community <i>✳</i></span>
+  </div>
+</div>
+
+<!-- ══ 04. GALLERY ══ -->
+<section class="sec-pad" id="gallery">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="pulse"></span><b>04</b> — Photo &amp; Milestone Archives</p>
+      <h2 class="sec-title" data-lines>Session milestones &amp;<br><em>club memories.</em></h2>
+      <p class="sec-lede">Documented collections and milestone logs from our workshops, 24-hour campus hackathons, and technical meetups at Chitkara University. Click any album to launch the interactive event timeline viewer.</p>
+    </div>
+
+    <!-- Albums Grid -->
+    <div class="card-grid-3">
+
+      <!-- Album 1: Next.js 14 Workshop -->
+      <article class="c2c-card album-card"
+        data-album-id="alb-1"
+        data-title="Next.js 14 Architecture Workshop"
+        data-count="4"
+        data-date="15 Oct 2026"
+        data-desc="Photographs and milestone logs from our hands-on workshop covering React Server Components, server actions, and PostgreSQL security."
+        data-logs='[
+          {"title":"Hands-on Coding Session","desc":"Architectural walkthrough of Next.js 14 server components with live debugging."},
+          {"title":"Live Database Teardown","desc":"Live demonstration of database queries, connection pooling, and server actions."},
+          {"title":"Peer Mentorship Checkpoint","desc":"Student coordinators helping participants debug environment variables and docker instances."},
+          {"title":"Production Deployment Sprint","desc":"Wrap-up session with live application deployments to production hosts."}
+        ]'>
+        <div>
+          <div class="album-viz">
+            <svg class="album-blueprint" viewBox="0 0 400 220">
+              <defs>
+                <radialGradient id="alGrad1" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#3d6bff" stop-opacity=".35"/>
+                  <stop offset="100%" stop-color="#05070c" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#alGrad1)"/>
+              <line x1="40" y1="40" x2="360" y2="40" stroke="rgba(125,157,255,.15)"/>
+              <line x1="40" y1="110" x2="360" y2="110" stroke="rgba(125,157,255,.2)"/>
+              <line x1="40" y1="180" x2="360" y2="180" stroke="rgba(125,157,255,.15)"/>
+              <circle cx="100" cy="110" r="28" stroke="#3d6bff" stroke-width="1.5" fill="none"/>
+              <circle cx="200" cy="110" r="38" stroke="#7d9dff" stroke-width="1.5" fill="none" stroke-dasharray="3 6"/>
+              <circle cx="300" cy="110" r="28" stroke="#10b981" stroke-width="1.5" fill="none"/>
+              <path d="M128 110h34M238 110h34" stroke="#c3d6ff" stroke-width="1.5"/>
+              <text x="200" y="115" fill="#fff" font-family="monospace" font-size="12" text-anchor="middle" font-weight="600">SERVER ACTIONS</text>
+            </svg>
+
+            <div class="album-overlay">
+              <span class="album-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                <span>4 Photos Logged</span>
+              </span>
+              <span style="font-family:var(--ff-mono);font-size:11px;color:var(--blue-ice);background:rgba(0,0,0,.7);padding:3px 8px;border-radius:4px;">15 Oct 2026</span>
+            </div>
+          </div>
+
+          <h3 class="event-card__title" style="font-size:20px;">Next.js 14 Full-Stack Workshop</h3>
+          <p style="font-size:13.5px;color:var(--ink-2);line-height:1.6;margin-bottom:20px;">
+            Photographs and milestone logs from our hands-on workshop covering React Server Components, server actions, and PostgreSQL security.
+          </p>
+        </div>
+
+        <div class="event-card__action">
+          <span style="font-family:var(--ff-mono);font-size:11px;color:var(--blue-lt);">Turing Hall · Chitkara</span>
+          <span class="pill-btn active" style="font-size:11px;">Open Timeline →</span>
+        </div>
+      </article>
+
+      <!-- Album 2: ChillHack 2026 -->
+      <article class="c2c-card album-card"
+        data-album-id="alb-2"
+        data-title="ChillHack 2026: 24-Hour Hackathon"
+        data-count="4"
+        data-date="20 Sep 2026"
+        data-desc="Capturing the energy, midnight debugging sprints, mentor checkpoints, and final software demos at ChillHack 2026."
+        data-logs='[
+          {"title":"Opening Brainstorming Sprint","desc":"Participating teams forming cross-discipline project blueprints and git repositories."},
+          {"title":"Midnight Innovation Sprint","desc":"Intense debugging sprint in the innovation lab with dual-monitor pairings."},
+          {"title":"Mentor Checkpoint & Review","desc":"Student coordinators giving architectural feedback on database structures."},
+          {"title":"Final Software Presentations","desc":"Finalist teams demonstrating live prototypes to peer engineering judges."}
+        ]'>
+        <div>
+          <div class="album-viz">
+            <svg class="album-blueprint" viewBox="0 0 400 220">
+              <defs>
+                <radialGradient id="alGrad2" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#ffb878" stop-opacity=".3"/>
+                  <stop offset="100%" stop-color="#05070c" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#alGrad2)"/>
+              <polygon points="200,45 280,165 120,165" stroke="#ffb878" stroke-width="1.5" fill="none"/>
+              <circle cx="200" cy="115" r="26" stroke="#ffb878" stroke-width="1.5" fill="none" stroke-dasharray="3 5"/>
+              <line x1="200" y1="45" x2="200" y2="165" stroke="rgba(255,184,120,.3)"/>
+              <text x="200" y="120" fill="#fff" font-family="monospace" font-size="12" text-anchor="middle" font-weight="700">24H SPRINT</text>
+            </svg>
+
+            <div class="album-overlay">
+              <span class="album-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                <span>4 Photos Logged</span>
+              </span>
+              <span style="font-family:var(--ff-mono);font-size:11px;color:var(--blue-ice);background:rgba(0,0,0,.7);padding:3px 8px;border-radius:4px;">20 Sep 2026</span>
+            </div>
+          </div>
+
+          <h3 class="event-card__title" style="font-size:20px;">ChillHack 2026: 24-Hour Campus Hackathon</h3>
+          <p style="font-size:13.5px;color:var(--ink-2);line-height:1.6;margin-bottom:20px;">
+            Capturing the energy, midnight debugging sprints, mentor checkpoints, and final software demos at ChillHack 2026.
+          </p>
+        </div>
+
+        <div class="event-card__action">
+          <span style="font-family:var(--ff-mono);font-size:11px;color:var(--blue-lt);">Innovation Lab</span>
+          <span class="pill-btn active" style="font-size:11px;">Open Timeline →</span>
+        </div>
+      </article>
+
+      <!-- Album 3: Git Jumpstart -->
+      <article class="c2c-card album-card"
+        data-album-id="alb-3"
+        data-title="Git &amp; Open Source Jumpstart"
+        data-count="3"
+        data-date="25 Aug 2026"
+        data-desc="First-year jumpstart session introducing version control, collaborative branch workflows, and practical terminal commands."
+        data-logs='[
+          {"title":"Interactive Terminal Guidance","desc":"Mentors helping first-year students configure git, SSH keys, and shell prompts."},
+          {"title":"Branch Topology Whiteboard","desc":"Visual diagramming of rebase workflows, squash commits, and pull requests."},
+          {"title":"First Pull Request Merged","desc":"Celebration as participants successfully open and merge their first open-source PR."}
+        ]'>
+        <div>
+          <div class="album-viz">
+            <svg class="album-blueprint" viewBox="0 0 400 220">
+              <defs>
+                <radialGradient id="alGrad3" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#10b981" stop-opacity=".3"/>
+                  <stop offset="100%" stop-color="#05070c" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#alGrad3)"/>
+              <line x1="60" y1="120" x2="340" y2="120" stroke="rgba(255,255,255,.2)" stroke-width="2"/>
+              <path d="M120 120 C 160 120, 160 70, 200 70 L 260 70 C 290 70, 290 120, 310 120" stroke="#34d399" stroke-width="2" fill="none"/>
+              <circle cx="120" cy="120" r="5" fill="#3d6bff"/>
+              <circle cx="200" cy="70" r="5" fill="#10b981"/>
+              <circle cx="260" cy="70" r="5" fill="#ffb878"/>
+              <circle cx="310" cy="120" r="6" fill="#34d399"/>
+              <text x="230" y="55" fill="#c3d6ff" font-family="monospace" font-size="11" text-anchor="middle">PR #001 MERGED</text>
+            </svg>
+
+            <div class="album-overlay">
+              <span class="album-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                <span>3 Photos Logged</span>
+              </span>
+              <span style="font-family:var(--ff-mono);font-size:11px;color:var(--blue-ice);background:rgba(0,0,0,.7);padding:3px 8px;border-radius:4px;">25 Aug 2026</span>
+            </div>
+          </div>
+
+          <h3 class="event-card__title" style="font-size:20px;">Git &amp; Open Source Jumpstart</h3>
+          <p style="font-size:13.5px;color:var(--ink-2);line-height:1.6;margin-bottom:20px;">
+            First-year jumpstart session introducing version control, collaborative branch workflows, and practical terminal commands.
+          </p>
+        </div>
+
+        <div class="event-card__action">
+          <span style="font-family:var(--ff-mono);font-size:11px;color:var(--blue-lt);">Computing Block</span>
+          <span class="pill-btn active" style="font-size:11px;">Open Timeline →</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__row">
+    <span>Connect <i>✳</i> Collaborate <i>✳</i> Learn <i>✳</i> Chill <i>✳</i></span>
+    <span>Connect <i>✳</i> Collaborate <i>✳</i> Learn <i>✳</i> Chill <i>✳</i></span>
+  </div>
+</div>
+
+<!-- ══ 05. CONTACT ══ -->
+<section class="sec-pad" id="contact">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="pulse"></span><b>05</b> — Contact &amp; Inquiries</p>
+      <h2 class="sec-title" data-lines>Connect with the<br><em>coordinators.</em></h2>
+      <p class="sec-lede">Have questions about upcoming workshops, want to collaborate on student technical initiatives, or submit feedback? Reach out directly through our verified social profiles or send an inquiry below.</p>
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- Left Column: Official Channels -->
+      <div>
+        <h3 style="font-size:22px;font-weight:700;color:var(--cream);margin-bottom:8px;">Official Channels</h3>
+        <p style="font-size:13.5px;color:var(--ink-2);line-height:1.6;margin-bottom:24px;">
+          For fastest response, event reminders, and workshop stories, connect with student leads across our official social presences:
+        </p>
+
+        <!-- Instagram Card -->
+        <a href="https://www.instagram.com/code2chill.osl/" target="_blank" rel="noopener noreferrer" class="channel-card">
+          <div class="channel-card__top">
+            <div class="channel-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <span>Instagram</span>
+            </div>
+            <span class="verified-pill">Verified</span>
+          </div>
+          <p class="channel-desc">
+            Direct message our student leads, check workshop stories, registration links, and live event updates.
+          </p>
+          <span class="channel-link">Follow @code2chill.osl ↗</span>
+        </a>
+
+        <!-- LinkedIn Card -->
+        <a href="https://www.linkedin.com/company/code2chill/posts/" target="_blank" rel="noopener noreferrer" class="channel-card">
+          <div class="channel-card__top">
+            <div class="channel-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <span>LinkedIn</span>
+            </div>
+            <span class="verified-pill">Official Page</span>
+          </div>
+          <p class="channel-desc">
+            Professional milestone updates, student project achievements, engineering retrospectives, and campus initiatives.
+          </p>
+          <span class="channel-link">Connect on LinkedIn ↗</span>
+        </a>
+
+        <!-- Campus Card -->
+        <div class="channel-card" style="cursor:default;">
+          <div class="channel-card__top">
+            <div class="channel-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Chitkara University</span>
+            </div>
+            <span style="font-family:var(--ff-mono);font-size:10px;color:var(--blue-lt);">Punjab, India</span>
+          </div>
+          <p class="channel-desc">
+            Student-founded &amp; student-led engineering community bringing together curious minds across campus departments.
+          </p>
+          <a href="https://chitkara.edu.in" target="_blank" rel="noopener noreferrer" class="channel-link">Visit University Portal ↗</a>
+        </div>
+      </div>
+
+      <!-- Right Column: Direct Inquiry Form -->
+      <div class="form-panel">
+        <h3>Send Direct Inquiry</h3>
+        <p>Messages are delivered directly to verified student coordinators. We reply within 48 hours.</p>
+
+        <form id="inquiryForm" novalidate>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="inquiryName">Your Name</label>
+              <input class="form-control" type="text" id="inquiryName" placeholder="e.g. Rohan Mehta" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inquiryEmail">Email Address</label>
+              <input class="form-control" type="email" id="inquiryEmail" placeholder="you@chitkara.edu.in" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="inquiryCategory">Inquiry Type</label>
+            <select class="form-control" id="inquiryCategory" style="cursor:pointer;">
+              <option value="workshop">Workshop or Event Question</option>
+              <option value="collaboration">Project Collaboration / Speaker Proposal</option>
+              <option value="membership">Club Membership &amp; Pairing Nights</option>
+              <option value="feedback">General Feedback &amp; Ideas</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="inquirySubject">Subject</label>
+            <input class="form-control" type="text" id="inquirySubject" placeholder="Brief subject line...">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="inquiryMsg">Message</label>
+            <textarea class="form-control" id="inquiryMsg" maxlength="500" placeholder="Tell us what you're building, curious about, or hoping to explore..." required></textarea>
+          </div>
+
+          <div class="form-foot">
+            <span class="char-counter" id="inquiryCharCount">0 / 500</span>
+            <button class="btn btn--nav" type="submit" style="padding:12px 28px;font-size:13px;">
+              <span>Send Message</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"/></svg>
+            </button>
+          </div>
+
+          <div id="inquiryStatus" style="display:none;margin-top:20px;"></div>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="faq-section">
+      <h3 class="faq-title">Frequently Asked Questions</h3>
+      <div class="faq-list">
+
+        <div class="faq-item open">
+          <button class="faq-trigger" type="button">
+            <span>Who can participate in Code2Chill workshops?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Code2Chill is an active student technical community at Chitkara University. Session details, eligibility, or prerequisites (if any) are clearly communicated on each individual event announcement.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button">
+            <span>Do I need prior programming experience to attend?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sessions cater to varying skill levels depending on the topic. Specific technical requirements or preparation instructions are announced prior to each workshop so everyone can follow along comfortably.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button">
+            <span>How can I stay updated on club activities and upcoming sessions?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Follow our confirmed official Instagram (@code2chill.osl) and LinkedIn (@code2chill) accounts, where upcoming sessions, hackathons, and announcements are published first.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button">
+            <span>How can I connect with the student team or collaborate?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              You can reach out through this inquiry form, connect with our student coordinators on LinkedIn, or send a direct message to our student leads on Instagram.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer class="foot">
+  <div class="container foot__top">
+    <div class="foot__brand">
+      <img src="assets/img/mark.png" alt="Code2Chill">
+      <p>CODE2CHILL<br><span>Learn. Build. Connect.</span></p>
+      <p style="font-size:13px;line-height:1.6;color:var(--ink-2);max-width:380px;margin-top:12px;">
+        An active student-led technical community bringing curious minds together at Chitkara University to explore engineering, develop practical software, and collaborate across technical disciplines.
+      </p>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:16px;">
+        <a href="https://www.instagram.com/code2chill.osl/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Official Instagram" title="Official Instagram">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/code2chill/posts/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Official LinkedIn" title="Official LinkedIn">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <span style="font-family:var(--ff-mono);font-size:11px;color:var(--ink-3);margin-left:4px;">Official Channels</span>
+      </div>
+    </div>
+    <nav class="foot__nav" aria-label="Footer">
+      <div>
+        <h4>Explore</h4>
+        <a href="#events">Events Schedule</a>
+        <a href="#projects">Student Projects</a>
+        <a href="#gallery">Milestone Archive</a>
+      </div>
+      <div>
+        <h4>Community</h4>
+        <a href="#team">Student Leadership</a>
+        <a href="#contact">Contact &amp; Inquiries</a>
+        <a href="https://chitkara.edu.in" target="_blank" rel="noopener noreferrer">Chitkara University ↗</a>
+      </div>
+      <div>
+        <h4>Administration</h4>
+        <p style="font-size:12px;color:var(--ink-3);line-height:1.5;margin-bottom:8px;">Authorized student coordinators manage club publications.</p>
+        <a href="#" data-coord-access style="color:var(--blue-lt);font-weight:500;">Coordinator Access →</a>
+        <span class="foot__clock" style="margin-top:16px;"><i></i><span id="clock">--:--:--</span> IST</span>
+      </div>
+    </nav>
+  </div>
+  <div class="container foot__bottom">
+    <span>© 2026 Code2Chill · Chitkara University, Punjab. Student-led community.</span>
+    <span class="foot__dot">·</span>
+    <span>Asia/Kolkata (IST)</span>
+    <span class="foot__right">All rights reserved. Zero tracking.</span>
+  </div>
+</footer>
+
+<!-- ══ SCROLL RAIL ══ -->
+<div class="rail" aria-hidden="true">
+  <span class="rail__label" id="railLabel">Top</span>
+  <div class="rail__track"><i id="railFill"></i><b id="railDot"></b></div>
+  <span class="rail__num" id="railNum">00</span>
+</div>
+
+<!-- ══ COMMAND PALETTE ══ -->
+<div class="cmd" id="cmd" role="dialog" aria-modal="true" aria-labelledby="cmdTitle" aria-hidden="true">
+  <div class="cmd__scrim" data-cmd-close></div>
+  <div class="cmd__box" role="document">
+    <div class="cmd__bar">
+      <svg class="cmd__ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.4"/><path d="M10.4 10.4 14 14"/></svg>
+      <input class="cmd__input" id="cmdInput" type="text" placeholder="Jump to a section, or type chill…" autocomplete="off" spellcheck="false" aria-label="Search the site">
+      <kbd class="cmd__esc">esc</kbd>
+    </div>
+    <h2 class="cmd__title" id="cmdTitle" hidden>Command palette</h2>
+    <ul class="cmd__list" id="cmdList" role="listbox" aria-label="Results"></ul>
+    <p class="cmd__empty" id="cmdEmpty" hidden>Nothing here yet. Try <b>loop</b> or <b>nights</b>.</p>
+    <div class="cmd__foot">
+      <span><kbd>↑</kbd><kbd>↓</kbd> move</span>
+      <span><kbd>↵</kbd> open</span>
+      <span class="cmd__theme">theme <b id="cmdTheme">night</b></span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOCUS ROOM ══ -->
+<div class="room" id="room" role="dialog" aria-modal="true" aria-labelledby="roomTitle" aria-hidden="true">
+  <div class="room__bg" aria-hidden="true"><div class="room__beam"></div><div class="room__stars"></div></div>
+  <div class="room__inner">
+    <header class="room__head">
+      <p class="room__tag"><i></i> Deep Work · session <span id="roomNo">01</span></p>
+      <button class="room__exit" id="roomExit" aria-label="Leave the focus room">
+        <span>Leave quietly</span>
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+      </button>
+    </header>
+
+    <div class="room__core">
+      <div class="room__dial">
+        <svg class="room__ring" viewBox="0 0 400 400" aria-hidden="true">
+          <circle class="room__track" cx="200" cy="200" r="168"/>
+          <circle class="room__prog" id="roomProg" cx="200" cy="200" r="168"/>
+          <circle class="room__head" id="roomHead" cx="200" cy="32" r="3.6"/>
+        </svg>
+        <div class="room__time" id="roomTime" role="timer" aria-live="off">25:00</div>
+      </div>
+      <p class="room__state" id="roomState">Breathe in. The room is quiet.</p>
+      <div class="room__btns">
+        <button class="room__btn room__btn--main" id="roomToggle" data-cursor="link">
+          <svg class="room__i room__i--play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.4v9.2L12.4 8z"/></svg>
+          <svg class="room__i room__i--pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.6 3.2h2.2v9.6H4.6zM9.2 3.2h2.2v9.6H9.2z"/></svg>
+          <span id="roomToggleTxt">Start focusing</span>
+        </button>
+        <button class="room__btn" id="roomReset" data-cursor="link">Reset</button>
+      </div>
+      <div class="room__lens" role="group" aria-label="Session length">
+        <button data-min="25" class="on">25</button>
+        <button data-min="50">50</button>
+        <button data-min="90">90</button>
+      </div>
+    </div>
+
+    <footer class="room__foot">
+      <p>Notifications paused · tab title dimmed · one tab, one task</p>
+      <p class="room__live"><span id="roomSessions">0</span> sessions finished in this tab</p>
+    </footer>
+  </div>
+</div>
+
+<!-- ══ GENERIC DETAIL MODAL ══ -->
+<div class="c2c-modal" id="c2cModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-scrim" data-modal-close></div>
+  <div class="modal-container" role="document">
+    <button class="modal-close-btn" data-modal-close aria-label="Close dialog">
+      <svg viewBox="0 0 16 16" width="14" height="14" stroke="currentColor" fill="none"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+    </button>
+    <div class="eyebrow" id="modalCategory" style="margin-bottom:12px;"></div>
+    <h3 id="modalTitle" style="font-size:26px;font-weight:700;color:var(--cream);margin-bottom:20px;line-height:1.2;"></h3>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[1124/205031.388:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1124/205036.408:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1124/205046.431:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1124/205106.437:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1124/205250.363:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1124/205255.383:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1124/205305.411:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1124/205325.433:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1124/210752.089:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1124/210753.144:ERROR:gpu\command_buffer\service\gl_utils.cc:430] [.WebGL-0x746c001bca00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[1124/210753.269:ERROR:gpu\command_buffer\service\gl_utils.cc:430] [.WebGL-0x746c001bca00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[1124/210753.380:ERROR:gpu\command_buffer\service\gl_utils.cc:430] [.WebGL-0x746c001bca00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[1124/210753.434:ERROR:gpu\command_buffer\service\gl_utils.cc:430] [.WebGL-0x746c001bca00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+[1124/210757.107:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1124/210807.113:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1124/210827.121:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1124/210913.611:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1124/210914.111:ERROR:gpu\command_buffer\service\gl_utils.cc:430] [.WebGL-0x5ea4001bd600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[1124/210914.270:ERROR:gpu\command_buffer\service\gl_utils.cc:430] [.WebGL-0x5ea4001bd600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[1124/210914.314:ERROR:gpu\command_buffer\service\gl_utils.cc:430] [.WebGL-0x5ea4001bd600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[1124/210914.360:ERROR:gpu\command_buffer\service\gl_utils.cc:430] [.WebGL-0x5ea4001bd600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+[1124/210918.627:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
